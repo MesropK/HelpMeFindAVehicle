@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B22383381E16250B0037A26F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22383371E16250B0037A26F /* AppDelegate.swift */; };
-		B223833A1E16250B0037A26F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22383391E16250B0037A26F /* ViewController.swift */; };
 		B223833D1E16250B0037A26F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B223833B1E16250B0037A26F /* Main.storyboard */; };
 		B22383401E16250C0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B223833E1E16250B0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodeld */; };
 		B22383421E16250C0037A26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22383411E16250C0037A26F /* Assets.xcassets */; };
 		B22383451E16250C0037A26F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22383431E16250C0037A26F /* LaunchScreen.storyboard */; };
+		B223834E1E1625900037A26F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B223834D1E1625900037A26F /* LoginViewController.swift */; };
+		B22383541E163C130037A26F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22383531E163C130037A26F /* Helpers.swift */; };
+		B22383591E1658880037A26F /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = B22383581E1658880037A26F /* icon1024.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B22383341E16250B0037A26F /* Help Me Find A Vehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Help Me Find A Vehicle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22383371E16250B0037A26F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B22383391E16250B0037A26F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B223833C1E16250B0037A26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B223833F1E16250C0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Help_Me_Find_A_Vehicle.xcdatamodel; sourceTree = "<group>"; };
 		B22383411E16250C0037A26F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22383441E16250C0037A26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22383461E16250C0037A26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B223834D1E1625900037A26F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B22383531E163C130037A26F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		B22383581E1658880037A26F /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			children = (
 				B22383361E16250B0037A26F /* Help Me Find A Vehicle */,
 				B22383351E16250B0037A26F /* Products */,
+				B22383581E1658880037A26F /* icon1024.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +61,56 @@
 		B22383361E16250B0037A26F /* Help Me Find A Vehicle */ = {
 			isa = PBXGroup;
 			children = (
+				B22383521E163C080037A26F /* Helpers */,
+				B223834C1E1625570037A26F /* Controllers */,
+				B22383501E1626420037A26F /* Storyboard */,
+				B22383511E16266A0037A26F /* CoreData */,
+				B223834F1E1626180037A26F /* Supporting Files */,
 				B22383371E16250B0037A26F /* AppDelegate.swift */,
-				B22383391E16250B0037A26F /* ViewController.swift */,
-				B223833B1E16250B0037A26F /* Main.storyboard */,
-				B22383411E16250C0037A26F /* Assets.xcassets */,
-				B22383431E16250C0037A26F /* LaunchScreen.storyboard */,
-				B22383461E16250C0037A26F /* Info.plist */,
-				B223833E1E16250B0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodeld */,
 			);
 			path = "Help Me Find A Vehicle";
+			sourceTree = "<group>";
+		};
+		B223834C1E1625570037A26F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B223834D1E1625900037A26F /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B223834F1E1626180037A26F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B22383411E16250C0037A26F /* Assets.xcassets */,
+				B22383461E16250C0037A26F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B22383501E1626420037A26F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B223833B1E16250B0037A26F /* Main.storyboard */,
+				B22383431E16250C0037A26F /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		B22383511E16266A0037A26F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B223833E1E16250B0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		B22383521E163C080037A26F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B22383531E163C130037A26F /* Helpers.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +175,7 @@
 				B22383451E16250C0037A26F /* LaunchScreen.storyboard in Resources */,
 				B22383421E16250C0037A26F /* Assets.xcassets in Resources */,
 				B223833D1E16250B0037A26F /* Main.storyboard in Resources */,
+				B22383591E1658880037A26F /* icon1024.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B223834E1E1625900037A26F /* LoginViewController.swift in Sources */,
 				B22383401E16250C0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodeld in Sources */,
-				B223833A1E16250B0037A26F /* ViewController.swift in Sources */,
 				B22383381E16250B0037A26F /* AppDelegate.swift in Sources */,
+				B22383541E163C130037A26F /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Help Me Find A Vehicle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.helpmefindavehicle.Help-Me-Find-A-Vehicle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -277,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Help Me Find A Vehicle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.helpmefindavehicle.Help-Me-Find-A-Vehicle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
