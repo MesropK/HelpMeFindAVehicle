@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//MARK: - Extensions
 extension UIViewAnimationCurve {
     func toOptions() -> UIViewAnimationOptions {
         return UIViewAnimationOptions(rawValue: UInt(rawValue << 16))

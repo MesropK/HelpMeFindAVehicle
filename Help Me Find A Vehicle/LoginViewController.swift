@@ -13,7 +13,7 @@ struct UserLoginData {
     let password: String
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     struct Colors {
         static let activeColor = UIColor.darkGray
@@ -56,14 +56,11 @@ class LoginViewController: UIViewController {
         return button
     } ()
     
-    func setupUI() {
-        navigationController?.navigationBar.barTintColor = UIColor.appColor
-        navigationController?.navigationBar.titleTextAttributes =
-        [NSForegroundColorAttributeName : UIColor.white]
+    override func setupUI() {
+        super.setupUI()
         signInButton.backgroundColor = UIColor.appColor
         autoLoginSwitch.tintColor = UIColor.appColor
         autoLoginSwitch.onTintColor = UIColor.appColor
-        setNeedsStatusBarAppearanceUpdate()
         secureButton.addTarget(self, action: #selector(self.clearButtonTapped(button:)), for: .touchUpInside)
         passwordTextField.rightViewMode = .whileEditing;
         passwordTextField.rightView = secureButton
@@ -148,6 +145,19 @@ class LoginViewController: UIViewController {
     @IBAction func autoLoginValueChanged(_ sender: UISwitch) {
     }
     @IBAction func loginTapped(_ sender: UIButton) {
+        //Open dashboardPage
+        let dashboard = Storyboard.controllers.dashboardNav
+        let snapshot: UIView = (self.view.window?.snapshotView(afterScreenUpdates: true))!
+        dashboard.view.addSubview(snapshot);
+        view.window?.rootViewController = dashboard;
+        UIView.animate(withDuration: 0.3, animations: {() in
+            snapshot.layer.opacity = 0;
+            let shiftTransform = CATransform3DMakeTranslation(1, 1, 1)
+            snapshot.layer.transform = shiftTransform
+        }, completion: {
+            (value: Bool) in
+            snapshot.removeFromSuperview();
+        });
     }
 }
 //MARK: - Text fieeld delegate
