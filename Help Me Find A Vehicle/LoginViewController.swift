@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CircularSpinner
 
 struct UserLoginData {
     let login: String
     let password: String
+    let checkUser = true
 }
 
 class LoginViewController: BaseViewController {
@@ -86,8 +88,8 @@ class LoginViewController: BaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         let notificationCenter = NotificationCenter.default
-       notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-       notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         notificationCenter.addObserver(self, selector: #selector(self.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
@@ -132,7 +134,7 @@ class LoginViewController: BaseViewController {
                 }, completion: { finished in
                     self.keyboardIsHidden = true
                 }
-            )
+                )
             }
         default: ()
         }
@@ -145,6 +147,20 @@ class LoginViewController: BaseViewController {
     @IBAction func autoLoginValueChanged(_ sender: UISwitch) {
     }
     @IBAction func loginTapped(_ sender: UIButton) {
+        showSpinner()
+        NetworkManger.loginWithUser(forUser: userLoginData) { (loggedIN) in
+            CircularSpinner.hide()
+            if loggedIN {
+                self.openDashboardPage()
+            }
+        }
+    }
+    
+    func showSpinner() {
+        CircularSpinner.show("loging in...", animated: true, type: .indeterminate, showDismissButton: false)
+    }
+    
+    func openDashboardPage() {
         //Open dashboardPage
         let dashboard = Storyboard.controllers.dashboardNav
         let snapshot: UIView = (self.view.window?.snapshotView(afterScreenUpdates: true))!
@@ -179,18 +195,26 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === nameTextField {
             passwordTextField.becomeFirstResponder()
-           return false
+            return false
         }
         textField.resignFirstResponder()
         return true
     }
     //MARK: Login validation
     func validateUserLogin(){
-       if let name =  nameTextField.text, !name.isEmpty,
+        if let name =  nameTextField.text, !name.isEmpty,
             let password =  passwordTextField.text, !password.isEmpty {
             userLoginData = UserLoginData(login: name, password: password)
             return
         }
         userLoginData = nil
+    }
+}
+
+//MARK: Login spinner delegate
+
+extension LoginViewController: CircularSpinnerDelegate {
+    func circularSpinnerTitleForValue(_ value: Float) -> NSAttributedString {
+        return NSAttributedString(string: String(value))
     }
 }

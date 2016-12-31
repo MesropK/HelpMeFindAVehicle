@@ -1,0 +1,6 @@
+framework module Pods_Help_Me_Find_A_Vehicle {
+  umbrella header "Pods-Help Me Find A Vehicle-umbrella.h"
+
+  export *
+  module * { export * }
+}

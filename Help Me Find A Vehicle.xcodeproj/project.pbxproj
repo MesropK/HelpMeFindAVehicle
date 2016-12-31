@@ -18,9 +18,17 @@
 		B223835B1E1675250037A26F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B223835A1E1675250037A26F /* DashboardViewController.swift */; };
 		B223835D1E168B770037A26F /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B223835C1E168B770037A26F /* Storyboard.swift */; };
 		B223835F1E16CB150037A26F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B223835E1E16CB150037A26F /* BaseViewController.swift */; };
+		B22383611E16EA750037A26F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22383601E16EA750037A26F /* InfoViewController.swift */; };
+		B2C02BEA1E17CF2D004848B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C02BE91E17CF2D004848B5 /* NetworkManager.swift */; };
+		B2C02BEC1E17E9E7004848B5 /* RestCallData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */; };
+		B2CAD3691E17211300DB237A /* BarcodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD3681E17211300DB237A /* BarcodeScanViewController.swift */; };
+		CD024EA296665B682F879B25 /* Pods_Help_Me_Find_A_Vehicle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562272F43CD107B178E00266 /* Pods_Help_Me_Find_A_Vehicle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4718BD2F670AC42D8494098D /* Pods-Help Me Find A Vehicle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Help Me Find A Vehicle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Help Me Find A Vehicle/Pods-Help Me Find A Vehicle.debug.xcconfig"; sourceTree = "<group>"; };
+		562272F43CD107B178E00266 /* Pods_Help_Me_Find_A_Vehicle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Help_Me_Find_A_Vehicle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F84A60FAF42097665201ACC /* Pods-Help Me Find A Vehicle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Help Me Find A Vehicle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Help Me Find A Vehicle/Pods-Help Me Find A Vehicle.release.xcconfig"; sourceTree = "<group>"; };
 		B22383341E16250B0037A26F /* Help Me Find A Vehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Help Me Find A Vehicle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22383371E16250B0037A26F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B223833C1E16250B0037A26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +42,10 @@
 		B223835A1E1675250037A26F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B223835C1E168B770037A26F /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		B223835E1E16CB150037A26F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B22383601E16EA750037A26F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B2C02BE91E17CF2D004848B5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestCallData.swift; sourceTree = "<group>"; };
+		B2CAD3681E17211300DB237A /* BarcodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,18 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD024EA296665B682F879B25 /* Pods_Help_Me_Find_A_Vehicle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		035AD65BD6C0AE90053C19EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4718BD2F670AC42D8494098D /* Pods-Help Me Find A Vehicle.debug.xcconfig */,
+				5F84A60FAF42097665201ACC /* Pods-Help Me Find A Vehicle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1EE026DE99C8B95134C3EA5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				562272F43CD107B178E00266 /* Pods_Help_Me_Find_A_Vehicle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B223832B1E16250B0037A26F = {
 			isa = PBXGroup;
 			children = (
 				B22383361E16250B0037A26F /* Help Me Find A Vehicle */,
 				B22383351E16250B0037A26F /* Products */,
 				B22383581E1658880037A26F /* icon1024.png */,
+				035AD65BD6C0AE90053C19EE /* Pods */,
+				1EE026DE99C8B95134C3EA5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B22383521E163C080037A26F /* Helpers */,
+				B2C02BE81E17CF06004848B5 /* Networking */,
 				B223834C1E1625570037A26F /* Controllers */,
 				B22383501E1626420037A26F /* Storyboard */,
 				B22383511E16266A0037A26F /* CoreData */,
@@ -83,6 +116,8 @@
 				B223834D1E1625900037A26F /* LoginViewController.swift */,
 				B223835A1E1675250037A26F /* DashboardViewController.swift */,
 				B223835E1E16CB150037A26F /* BaseViewController.swift */,
+				B22383601E16EA750037A26F /* InfoViewController.swift */,
+				B2CAD3681E17211300DB237A /* BarcodeScanViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +157,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		B2C02BE81E17CF06004848B5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B2C02BE91E17CF2D004848B5 /* NetworkManager.swift */,
+				B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B22383491E16250C0037A26F /* Build configuration list for PBXNativeTarget "Help Me Find A Vehicle" */;
 			buildPhases = (
+				AF947A1D9DE5F2DFDC3B6143 /* [CP] Check Pods Manifest.lock */,
 				B22383301E16250B0037A26F /* Sources */,
 				B22383311E16250B0037A26F /* Frameworks */,
 				B22383321E16250B0037A26F /* Resources */,
+				4C3B0A85AC6513AA6727F72C /* [CP] Embed Pods Frameworks */,
+				1EEC13DEE74A2B9FDA94B637 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,6 +201,7 @@
 				TargetAttributes = {
 					B22383331E16250B0037A26F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U36NMMLABB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -190,6 +238,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EEC13DEE74A2B9FDA94B637 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Help Me Find A Vehicle/Pods-Help Me Find A Vehicle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C3B0A85AC6513AA6727F72C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Help Me Find A Vehicle/Pods-Help Me Find A Vehicle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF947A1D9DE5F2DFDC3B6143 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B22383301E16250B0037A26F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -197,10 +293,14 @@
 			files = (
 				B223834E1E1625900037A26F /* LoginViewController.swift in Sources */,
 				B223835D1E168B770037A26F /* Storyboard.swift in Sources */,
+				B2C02BEA1E17CF2D004848B5 /* NetworkManager.swift in Sources */,
 				B22383401E16250C0037A26F /* Help_Me_Find_A_Vehicle.xcdatamodeld in Sources */,
+				B2CAD3691E17211300DB237A /* BarcodeScanViewController.swift in Sources */,
 				B223835B1E1675250037A26F /* DashboardViewController.swift in Sources */,
 				B22383381E16250B0037A26F /* AppDelegate.swift in Sources */,
 				B223835F1E16CB150037A26F /* BaseViewController.swift in Sources */,
+				B22383611E16EA750037A26F /* InfoViewController.swift in Sources */,
+				B2C02BEC1E17E9E7004848B5 /* RestCallData.swift in Sources */,
 				B22383541E163C130037A26F /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,8 +422,11 @@
 		};
 		B223834A1E16250C0037A26F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4718BD2F670AC42D8494098D /* Pods-Help Me Find A Vehicle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U36NMMLABB;
 				INFOPLIST_FILE = "Help Me Find A Vehicle/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -335,8 +438,11 @@
 		};
 		B223834B1E16250C0037A26F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F84A60FAF42097665201ACC /* Pods-Help Me Find A Vehicle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U36NMMLABB;
 				INFOPLIST_FILE = "Help Me Find A Vehicle/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +471,7 @@
 				B223834B1E16250C0037A26F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
