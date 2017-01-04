@@ -10,9 +10,12 @@ import UIKit
 //MARK: Storyboard
 
 enum IdForController: String {
-    case dashboard = "dashboardController"
-    case login     = "loginController"
-    case dashboardNav = "dashboardNavigationController"
+    case dashboard       = "dashboardController"
+    case login           = "loginController"
+    case dashboardNav    = "dashboardNavigationController"
+    case leitingDetail   = "detailListing"
+    case listingsList    = "ListingListViewController"
+    case listingsListNav = "ListingListViewControllerNav"
 }
 
 struct Controllers {
@@ -30,6 +33,20 @@ struct Controllers {
     var login: LoginViewController  {
         let controller =  Storyboard.main.instantiateViewController(withIdentifier: IdForController.login.rawValue)
         return controller as! LoginViewController
+    }
+    var detailListing: ListingDetailViewController {
+        let controller =  Storyboard.main.instantiateViewController(withIdentifier: IdForController.leitingDetail.rawValue)
+        return controller as! ListingDetailViewController
+    }
+    
+    var listingsList: ListingsListViewControler {
+        let controller =  Storyboard.main.instantiateViewController(withIdentifier: IdForController.listingsList.rawValue)
+        return controller as! ListingsListViewControler
+    }
+    
+    var listingsListNav: UINavigationController {
+        let controller =  Storyboard.main.instantiateViewController(withIdentifier: IdForController.listingsListNav.rawValue)
+        return controller as! UINavigationController
     }
     
 

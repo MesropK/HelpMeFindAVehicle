@@ -22,6 +22,12 @@
 		B2C02BEA1E17CF2D004848B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C02BE91E17CF2D004848B5 /* NetworkManager.swift */; };
 		B2C02BEC1E17E9E7004848B5 /* RestCallData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */; };
 		B2CAD3691E17211300DB237A /* BarcodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAD3681E17211300DB237A /* BarcodeScanViewController.swift */; };
+		B2FFBD971E193069001E2B19 /* SearchListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBD961E193069001E2B19 /* SearchListing.swift */; };
+		B2FFBD991E193291001E2B19 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBD981E193291001E2B19 /* Listing.swift */; };
+		B2FFBD9B1E196691001E2B19 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBD9A1E196691001E2B19 /* ListingViewController.swift */; };
+		B2FFBD9E1E19691F001E2B19 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBD9D1E19691F001E2B19 /* ListingCell.swift */; };
+		B2FFBDA01E19850F001E2B19 /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBD9F1E19850F001E2B19 /* ListingDetailViewController.swift */; };
+		B2FFBDA21E1985A2001E2B19 /* ListDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBDA11E1985A2001E2B19 /* ListDetailCell.swift */; };
 		CD024EA296665B682F879B25 /* Pods_Help_Me_Find_A_Vehicle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562272F43CD107B178E00266 /* Pods_Help_Me_Find_A_Vehicle.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +52,12 @@
 		B2C02BE91E17CF2D004848B5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestCallData.swift; sourceTree = "<group>"; };
 		B2CAD3681E17211300DB237A /* BarcodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanViewController.swift; sourceTree = "<group>"; };
+		B2FFBD961E193069001E2B19 /* SearchListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListing.swift; sourceTree = "<group>"; };
+		B2FFBD981E193291001E2B19 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		B2FFBD9A1E196691001E2B19 /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		B2FFBD9D1E19691F001E2B19 /* ListingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
+		B2FFBD9F1E19850F001E2B19 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
+		B2FFBDA11E1985A2001E2B19 /* ListDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		B22383361E16250B0037A26F /* Help Me Find A Vehicle */ = {
 			isa = PBXGroup;
 			children = (
+				B2FFBD9C1E1968F9001E2B19 /* View */,
 				B22383521E163C080037A26F /* Helpers */,
 				B2C02BE81E17CF06004848B5 /* Networking */,
 				B223834C1E1625570037A26F /* Controllers */,
@@ -113,6 +126,7 @@
 		B223834C1E1625570037A26F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B2FFBDA31E198701001E2B19 /* ListingView */,
 				B223834D1E1625900037A26F /* LoginViewController.swift */,
 				B223835A1E1675250037A26F /* DashboardViewController.swift */,
 				B223835E1E16CB150037A26F /* BaseViewController.swift */,
@@ -160,10 +174,38 @@
 		B2C02BE81E17CF06004848B5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B2FFBD951E193054001E2B19 /* Objects */,
 				B2C02BE91E17CF2D004848B5 /* NetworkManager.swift */,
-				B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		B2FFBD951E193054001E2B19 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B2C02BEB1E17E9E7004848B5 /* RestCallData.swift */,
+				B2FFBD961E193069001E2B19 /* SearchListing.swift */,
+				B2FFBD981E193291001E2B19 /* Listing.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		B2FFBD9C1E1968F9001E2B19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2FFBD9D1E19691F001E2B19 /* ListingCell.swift */,
+				B2FFBDA11E1985A2001E2B19 /* ListDetailCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B2FFBDA31E198701001E2B19 /* ListingView */ = {
+			isa = PBXGroup;
+			children = (
+				B2FFBD9A1E196691001E2B19 /* ListingViewController.swift */,
+				B2FFBD9F1E19850F001E2B19 /* ListingDetailViewController.swift */,
+			);
+			name = ListingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +340,14 @@
 				B2CAD3691E17211300DB237A /* BarcodeScanViewController.swift in Sources */,
 				B223835B1E1675250037A26F /* DashboardViewController.swift in Sources */,
 				B22383381E16250B0037A26F /* AppDelegate.swift in Sources */,
+				B2FFBDA21E1985A2001E2B19 /* ListDetailCell.swift in Sources */,
 				B223835F1E16CB150037A26F /* BaseViewController.swift in Sources */,
+				B2FFBDA01E19850F001E2B19 /* ListingDetailViewController.swift in Sources */,
+				B2FFBD991E193291001E2B19 /* Listing.swift in Sources */,
+				B2FFBD971E193069001E2B19 /* SearchListing.swift in Sources */,
 				B22383611E16EA750037A26F /* InfoViewController.swift in Sources */,
+				B2FFBD9B1E196691001E2B19 /* ListingViewController.swift in Sources */,
+				B2FFBD9E1E19691F001E2B19 /* ListingCell.swift in Sources */,
 				B2C02BEC1E17E9E7004848B5 /* RestCallData.swift in Sources */,
 				B22383541E163C130037A26F /* Helpers.swift in Sources */,
 			);

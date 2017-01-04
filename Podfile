@@ -10,6 +10,7 @@ target 'Help Me Find A Vehicle' do
 pod 'RSBarcodes_Swift', '~> 3.0.3'
 pod 'Alamofire', '~> 4.0'
 pod 'CircularSpinner'
+pod 'SwiftyJSON'
 
 
 end

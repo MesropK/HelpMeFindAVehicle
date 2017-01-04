@@ -26,6 +26,17 @@ class DashboardViewController: UITableViewController {
         super.viewDidLoad()
         setupUI()
         tableView.dataSource = self
+        //loadRequest()
+    }
+    
+    func loadRequest() {
+        let getList = ListingSearchData(userID: 1, offset: 10, make: "acura", model: "MDX", year: 2008, searchKeyword: "keyword")
+        NetworkManager.getListingBy(id: 2) { (listing) in
+            var list = listing
+            let detailController = Storyboard.controllers.detailListing
+            detailController.listing = list
+            self.present(detailController, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -62,6 +73,11 @@ class DashboardViewController: UITableViewController {
     }
     
     //MARK: - Actions
+    @IBAction func inventotyListTapped(_ sender: UIButton) {
+       let listingList =  Storyboard.controllers.listingsList
+        present(Storyboard.controllers.listingsListNav, animated: true, completion: nil)
+//        navigationController?.pushViewController(listingList, animated: true)
+    }
     @IBAction func ourWebsiteButtonAction(_ sender: UIButton) {
         if UIApplication.shared.canOpenURL(AppUrls.webURL) {
             UIApplication.shared.openURL(AppUrls.webURL)
@@ -93,14 +109,4 @@ class DashboardViewController: UITableViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

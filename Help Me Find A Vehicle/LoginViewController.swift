@@ -148,7 +148,7 @@ class LoginViewController: BaseViewController {
     }
     @IBAction func loginTapped(_ sender: UIButton) {
         showSpinner()
-        NetworkManger.loginWithUser(forUser: userLoginData) { (loggedIN) in
+        NetworkManager.loginWithUser(forUser: userLoginData) { (loggedIN) in
             CircularSpinner.hide()
             if loggedIN {
                 self.openDashboardPage()
